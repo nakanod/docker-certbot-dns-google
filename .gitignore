@@ -1,0 +1,8 @@
+.env
+google-credentials-file
+!config/.keep
+!logs/.keep
+!work/.keep
+config/
+logs/
+work/
