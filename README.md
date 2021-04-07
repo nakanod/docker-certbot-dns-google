@@ -1,11 +1,11 @@
 # Before using
 
 1. This requires docker and docker-compose, install them and run docker daemon.
-2. Create GCP service account and credentials file that have edit permission to Google DNS.
+2. Create a GCP service account that has edit permission to Google Cloud DNS, and generate its credentials file.
 
 # Setup
 
-Pull the container image, Create an environment file as `.env` and put the credentials file as `google-credentials-file` .
+Pull the container image, create an environment file as `.env` , and put the credentials file as `google-credentials-file` .
 
 ```sh
 cd docker-certbot-dns-google/
@@ -16,13 +16,13 @@ USERID=$(id -u)
 GROUPID=$(id -g)
 _EOF_
 
-cp -p /path/to/google/credentials/file ./google-credentials-file
+cp -p /path/to/your/google/credentials/file ./google-credentials-file
 ```
 
 # Run
 
-Obtain a wildcard certificate example.
-Files are created in `config` directory if command was successfully.
+This is an example of obtaining a wildcard certificate.
+Cerfiticates and a private key are created in `config` directory if it was successfully.
 
 ```sh
 docker-compose run --rm certbot-dns-google certbot certonly -m admin@example.com -d "*.example.com,example.com"
