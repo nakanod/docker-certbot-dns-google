@@ -1,4 +1,4 @@
-FROM python:3.9.2-slim-buster
+FROM python:3.9.5-slim-buster
 LABEL org.opencontainers.image.source https://github.com/nakanod/docker-certbot-dns-google
 
 RUN apt-get update && \
