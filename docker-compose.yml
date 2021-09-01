@@ -3,7 +3,7 @@ services:
   certbot-dns-google:
     build:
       context: ./files
-    image: ghcr.io/nakanod/certbot-dns-google:1.17.0
+    image: ghcr.io/nakanod/certbot-dns-google:1.18.0
     env_file:
       - ./.env
     volumes:
